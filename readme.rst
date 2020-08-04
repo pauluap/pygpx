@@ -1,7 +1,10 @@
 This library is designed for parsing and manipulating gpx files in Python.
 
 This project originally started: http://www.benno.id.au/code/pygpx/ by Ben Leslie.
+
 Modified by Nick Lang to work with GPX v1.1: https://github.com/fxdgear/pygpx
+
+Modified by Paul Thompson to work with py3
 
 I am modifying it further. Changes are in CHANGE-LOG.
 
@@ -11,6 +14,7 @@ Prerequisites
 Required by pygpx:
 
     * lxml
+    * py-dateutil
 
 
 pygpx has now been converted to v0.3.
@@ -42,6 +46,6 @@ API example:
                 print trkpnt.elevation
                 print trkpnt.hr
                 print trkpnt.time
-        
+
         print track.full_duration()
         print track.distance()

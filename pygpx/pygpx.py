@@ -55,7 +55,7 @@ class GPXTrackPt:
             c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
             d = radius * c
 
-        except ValueError, e:
+        except ValueError as e:
             raise ValueError(e)
         return d
 
@@ -147,7 +147,7 @@ class GPXTrack:
         try:
             return sum([trkseg.distance() for trkseg in self.trksegs])
         except IndexError:
-            print "emtpy track segment"
+            print("emtpy track segment")
 
     def duration(self):
         """Return the duration for this track. The sum of the duration
@@ -250,7 +250,7 @@ class GPX:
         try:
             return sum([track.distance() for track in self.tracks])
         except IndexError:
-            print "emtpy GPX file"
+            print("emtpy GPX file")
 
     def duration(self):
         """Return the duration for this track. The sum of the duration
@@ -287,3 +287,6 @@ class GPX:
         """Return the end time of te track."""
         return self.end().time
 
+
+if __name__ == '__main__':
+    g = GPX('.')

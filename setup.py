@@ -2,7 +2,7 @@
 
 from distutils.core import setup
 
-version = "0.3.1"
+version = "0.4.0"
 
 """Setup script for pygpx"""
 
@@ -27,5 +27,5 @@ setup (
                    "License :: OSI Approved :: MIT License"
                    ]
     )
-    
-    
+
+

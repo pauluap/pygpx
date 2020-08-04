@@ -1,1 +1,1 @@
-from pygpx import *
+from .pygpx import *
